@@ -1,0 +1,21 @@
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{data.title}}</title>
+    <meta content="ie=edge" httpequiv="x-ua-compatible">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="{{data.title}}" name="title">
+    <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+  </head>
+  <body>
+    <h1 class="text-red-300">{{ data.title }}</h1>
+    <h2 class="text-green-400">The next will be an array with {{ data.array | length }} items</h2>
+    <ul>
+      {% for item in data.array %}
+        <li>{{ item.description }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
